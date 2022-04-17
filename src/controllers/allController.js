@@ -1,7 +1,7 @@
 const authorsModel = require('../models/authorsModel');
 // const bookModel = require('../models/bookModel');
 const booksModel = require('../models/booksModel');
-const { all } = require('../routes/route');
+// const { all } = require('../routes/route');
 // const booksModel = require('../models/booksModel')
 
 const createNewAuthor = async function(req,res){
