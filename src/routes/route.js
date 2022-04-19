@@ -4,12 +4,23 @@ const router = express.Router();
 // const UserController= require("../controllers/userController")
 // const BookController= require("../controllers/bookController")
 // const allController = require("../controllers/allController")
-const popController = require("../controllers/popController")
+// const popController = require("../controllers/popController")
+const classController = require("../controllers/classController")
 
 
 // router.get("/test-me", function (req, res) {
 //     res.send("My first ever api!")
 // })
+
+router.post("/createNBatch", classController.createNBatch)
+
+router.post("/createNDevelop",classController.createNdevelop)
+
+router.get("/getFemCan",classController.getFemCan)
+
+// router.get("/developers",classController.developers)
+
+router.get("/developers1",classController.developers1)
 
 // router.post("/createUser", UserController.createUser  )
 
@@ -27,21 +38,21 @@ const popController = require("../controllers/popController")
 
 // router.get("/updatedBookPrice",allController.updatedBookPrice)
 
-// router.get("/authorsName",allController.authorsName)
+// router.get("/authorsName",allController.authorsName) 
 
-router.post("/createNAuthor",popController.createNAuthor)
+// router.post("/createNAuthor",popController.createNAuthor)
 
-router.post("/createNPublisher",popController.createNPublisher)
+// router.post("/createNPublisher",popController.createNPublisher)
 
 // router.get("/getauthoen",popController.getauthoen)
 
 // router.get("/createSBook",popController.createSBook)
 
-router.post('/createNBook',popController.createNBook)
+// router.post('/createNBook',popController.createNBook)
 
-router.get("/getBooksWithAuthorDetails",popController.getBooksWithAuthorDetails)
+// router.get("/getBooksWithAuthorDetails",popController.getBooksWithAuthorDetails)
 
-router.put("/books/:name",popController.hardCover)
+// router.put("/books/:name",popController.hardCover)
 
 // router.post("/getAuthorId",popController.getAuthorId)
 

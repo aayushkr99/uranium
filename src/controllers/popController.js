@@ -64,7 +64,7 @@ const createNBook = async function (req, res) {       // question 3 starts here
 
 
 const getBooksWithAuthorDetails = async function (req, res) {           // question 4 starts here
-    let uniqueBook = await newBookModel.find().populate('author').populate('publisher').count()
+    let uniqueBook = await newBookModel.find().populate('author')//.populate('publisher')
     res.send({ data: uniqueBook })
 }
 
@@ -87,12 +87,12 @@ const hardCover = async function (req, res) {
     res.send({ msg: updateBook , updatePrice })
 }
 
-module.exports.createNAuthor = createNAuthor
-module.exports.createNPublisher = createNPublisher
-// module.exports.getauthoen = getauthoen
-// module.exports.createSBook = createSBook
-module.exports.createNBook = createNBook
-module.exports.getBooksWithAuthorDetails = getBooksWithAuthorDetails
-module.exports.hardCover = hardCover
+// module.exports.createNAuthor = createNAuthor
+// module.exports.createNPublisher = createNPublisher
+// // module.exports.getauthoen = getauthoen
+// // module.exports.createSBook = createSBook
+// module.exports.createNBook = createNBook
+// module.exports.getBooksWithAuthorDetails = getBooksWithAuthorDetails
+// module.exports.hardCover = hardCover
 // module.exports.getAuthorId = getAuthorId
 // module.exports.crtAuthorId = crtAuthorId

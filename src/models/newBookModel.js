@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const ObjectId = mongoose.Schema.Types.ObjectId
+const ObjectId = mongoose.Schema.Types.ObjectId // extra step
 
 
 const bookN = new mongoose.Schema({
@@ -15,10 +15,10 @@ const bookN = new mongoose.Schema({
         type: ObjectId,
         ref: 'NewPublisher'
     },
-    isHardCover : {
-        type : Boolean,
-        default : false
-    }
+    // isHardCover : {
+    //     type : Boolean,
+    //     default : false
+    // }
 
 }, { timestamps:true }
 )
