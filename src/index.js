@@ -11,9 +11,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.connect("mongodb+srv://aayush245:nfSIEYYn8MYUbXG4@aayush.6yvut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true
 })
-.then( () => console.log("MongoDb is connected"))
-.catch ( err => console.log(err) )
+    .then(() => console.log("MongoDb is connected"))
+    .catch(err => console.log(err))
 
+app.use(
+    function (req, res, next) {
+        let currentDate = new Date().toLocaleString()
+        console.log("Inside The Global Middleware")
+        console.log(currentDate, req.ip, req.originalUrl)
+        next();
+    }
+)
 app.use('/', route);
 
 
