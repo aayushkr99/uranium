@@ -1,5 +1,5 @@
 const express = require('express');
-const externalModule = require('./logger')
+// const externalModule = require('./logger')
 
 const router = express.Router();
 
